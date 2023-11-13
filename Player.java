@@ -7,23 +7,8 @@ public class Player extends Monster implements Attack {
     }
 
 
-    @Override
-    public void attack(Monster monster) {
-        System.out.println("Игрок " + this.getName() + " атакует");
-        monster.damage(getForce());
-    }
-
     public int getLevel() {
         return level;
-    }
-
-    public static int buy() {
-        if (getHp() == 100) {
-            return getHp();
-        } else if (getHp() > 100) {
-            return 100;
-        } else
-            return getHp() + Trader.healthPotion;
     }
 
 }
